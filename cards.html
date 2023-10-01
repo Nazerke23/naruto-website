@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard Cards</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+    body{
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+    }
+
+    .magical-moments{
+        padding: 5%;
+        font-family: 'Kelly Slab', cursive;
+        background-color: #02025ad8;
+        color: white;
+        min-height: 100vh;
+    }
+
+    .magical-moments .magical-content h1{
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .magical-moments .magical-content .magical-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .magical-moments .magical-content .magical-cards .left-magic, 
+    .magical-moments .magical-content .magical-cards .right-magic{
+        width: 45%;
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy{
+        width: 450px;
+        height: 400px;
+        position: relative;
+        margin: 5%;
+        margin-top: 0;
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy .black-border{
+        position: absolute;
+        border: 1px solid #fff;
+        width: 430px;
+        height: 380px;
+        left: 10px;
+        top: 15px;
+        z-index: 33;
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy .img-container{
+        width: 450px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy .img-container:after{
+        content: '';
+        position: absolute;
+        bottom: 99px;
+        left: 0;
+        width: 103%;
+        height: 103px;
+        background: rgb(40, 44, 112);
+        clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy .img-container img{
+        width: 100%;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy:hover .img-container img {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy h1{
+        padding: 2px;
+        font-size: 34px;
+        text-align: center;
+        position: absolute;
+        bottom: 35px;
+    }
+
+    .magical-moments .magical-content .magical-cards .cardy:hover h1{
+        bottom:44px;
+    }
+
+    .empty{
+        width: 400px;
+        height: 200px;
+    }
+
+
+
+    @media(max-width: 1200px){
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 50%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 450px;
+            height: 400px;
+            position: relative;
+        }
+    }
+
+    @media(max-width: 1100px){
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 50%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 450px;
+            height: 400px;
+            position: relative;
+        }
+    }
+
+    @media(max-width: 1050px){
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 50%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 350px;
+            height: 300px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .black-border{
+            width: 330px;
+            height: 270px;
+            left: 10px;
+            top: 15px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container{
+            width: 350px;
+            height: 270px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container:after{
+            bottom: 60px;
+            width: 103%;
+            height: 85px;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy h1{
+            font-size: 30px;
+        }
+    }
+
+    @media(max-width: 850px){
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 50%;
+        }
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 300px;
+            height: 250px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .black-border{
+            width: 280px;
+            height: 230px;
+            left: 10px;
+            top: 15px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container{
+            width: 300px;
+            height: 200px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container:after{
+            bottom: 30px;
+            width: 103%;
+            height: 85px;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy h1{
+            font-size: 27px;
+        }
+    }
+
+    @media(max-width: 800px){
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 50%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 280px;
+            height: 250px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .black-border{
+            width: 250px;
+            height: 210px;
+            left: 10px;
+            top: 15px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container{
+            width: 280px;
+            height: 200px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container:after{
+            bottom: 30px;
+            width: 103%;
+            height: 85px;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy h1{
+            font-size: 28px;
+        }
+    }
+
+    @media(max-width: 600px){
+        .magical-moments .magical-content h1{
+            font-size: 2rem;
+            margin: .7rem;
+        }
+
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 100%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 300px;
+            height: 250px;
+            margin-left: 20%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .black-border{
+            width: 280px;
+            height: 230px;
+            left: 10px;
+            top: 15px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container{
+            width: 300px;
+            height: 200px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container:after{
+            bottom: 30px;
+            width: 103%;
+            height: 85px;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy h1{
+            font-size: 30px;
+        }
+
+        .empty{
+            height: 0;
+        }
+    }
+
+    @media(max-width: 500px){
+        .magical-moments .magical-content h1{
+            font-size: 2rem;
+            margin: .7rem;
+        }
+
+        .magical-moments .magical-content .magical-cards .left-magic, 
+        .magical-moments .magical-content .magical-cards .right-magic{
+            width: 100%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy{
+            width: 320px;
+            height: 250px;
+            margin-left: 5%;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .black-border{
+            width: 300px;
+            height: 230px;
+            left: 10px;
+            top: 15px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container{
+            width: 320px;
+            height: 200px;
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy .img-container:after{
+            bottom: 30px;
+            width: 103%;
+            height: 85px;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .magical-moments .magical-content .magical-cards .cardy h1{
+            font-size: 30px;
+        }
+
+        .empty{
+            height: 0;
+        }
+    }  
+</style>
+<body>
+    <div class="magical-moments">
+        <div class="magical-content">
+            <h1>Magical moments</h1>
+            <div class="magical-cards">
+                <div class="left-magic">
+                    <div class="cardy">
+                        <div class="black-border"></div>
+                        <div class="img-container">
+                            <img src="./IMG_0627.JPG" alt="">
+                        </div>
+                        <h1>Make your own destiny in your life</h1>
+                    </div>
+                    <div class="cardy">
+                        <div class="black-border"></div>
+                        <div class="img-container">
+                            <img src="./IMG_0628.JPG" alt="">
+                        </div>
+                        <h1>Make your own destiny in your life</h1>
+                    </div>
+                </div>
+                <div class="right-magic">
+                    <div class="empty"></div>
+                    <div class="cardy">
+                        <div class="black-border"></div>
+                        <div class="img-container">
+                            <img src="./IMG_0630.JPG" alt="">
+                        </div>
+                        <h1>Make your own destiny in your life</h1>
+                    </div>
+                    <div class="cardy">
+                        <div class="black-border"></div>
+                        <div class="img-container">
+                            <img src="./illustration-sunset-anime-cartoon-families-Naruto-Shippuuden-wreaths-Uzumaki-Naruto-Hyuuga-Hinata-Uzumaki-Boruto-Toy-Uzumaki-Himawari-screenshot-computer-wallpaper-mangaka-132598.jpg" alt="">
+                        </div>
+                        <h1>Make your own destiny in your life</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!--------FontAwesom-------->
+      <link rel="stylesheet" href="./css/all.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    footer{
+        width: 100%;
+        background: #02025ad8;
+        color: white;
+        padding: 3%;
+    }
+
+    .footer-content{
+        border: 1px solid white;
+        padding: 7%;
+    }
+
+    .beforeLine{
+        margin-top: -5px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        font-family: 'Hind Siliguri', sans-serif;
+        font-weight: 900;
+    }
+
+    .footer-content  .beforeLine .before-line-1, .footer-content  .beforeLine .before-line-2, .footer-content  .beforeLine .before-line-3{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-content  .beforeLine .before-line-1 a,
+    .footer-content  .beforeLine .before-line-2 a,
+    .footer-content  .beforeLine .before-line-3 a{
+        color: white;
+        text-decoration: none;
+        margin-top: .7rem;
+    }
+
+    .footer-content  .beforeLine .before-line-1 a:hover,
+    .footer-content  .beforeLine .before-line-2 a:hover,
+    .footer-content  .beforeLine .before-line-3 a:hover{
+        text-decoration: underline;
+    }
+
+    .footer-content  .beforeLine .before-line-4 {
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        margin: -20px 0;
+    }
+
+    @media (max-width:750px){
+        .footer-content  .beforeLine .before-line-1, .footer-content  .beforeLine .before-line-2, .footer-content  .beforeLine .before-line-3{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            order: 2;
+        }
+
+
+        .footer-content  .beforeLine .before-line-4{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            order: 1;
+        }
+    }
+
+    .afterLine{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .footer-content .after-line-1{
+        width: 70%;
+    }
+
+    .footer-content .after-line-1 p{
+       margin-top: 1rem;
+       font-size: 13px;
+       font-family: 'Montserrat', sans-serif;
+    }
+
+    .footer-content .after-line-2{
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footer-content .after-line-2 a{
+        margin: 0 .4rem;
+        padding: 0 1rem;
+        color: white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(36, 38, 50);
+        border-radius: 50%;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    @media (max-width:750px){
+        .footer-content .after-line-1, .footer-content .after-line-2{
+            width: 100%;
+        }
+
+        .footer-content .after-line-1{
+            order: 2;
+            text-align: center;
+        }
+
+        .footer-content .after-line-2{
+            justify-content: center;
+            padding: 1rem;
+            order: 1;
+        }
+    }
+
+
+</style>
+<body>
+    <footer>
+        <div class="footer-content">
+            <div class="beforeLine">
+                <div class="before-line-1">
+                    <a href="#about">About Us</a>
+                    <a href="#about">Press</a>
+                    <a href="#about">FAQ</a>
+                </div>
+                <div class="before-line-2">
+                    <a href="#about">Terms & Conditions</a>
+                    <a href="#about">Ad Choices</a>
+                    <a href="#about">Privacy % Cookies</a>
+                </div>
+                <div class="before-line-3">
+                    <a href="#about">Children's Privacy Policy</a>
+                    <a href="#about">Legals</a>
+                </div>
+                <div class="before-line-4">
+                    <img src="./images/2-logo.png" alt="" width="120px" height="120px">
+                </div>
+            </div>
+            <hr>
+            <div class="afterLine">
+                <div class="after-line-1">
+                    <p>© WIZARDING WORLD DIGITAL 2020</p>
+                    <p>Looking for Pottermore? Wizarding World is the new official home of Harry Potter & Fantastic Beasts. Join the Fan Club and bring your traits with you.</p>
+                    <p>Brought to you by Wizarding World Digital, a partnership between Warner Bros. and Pottermore. Delivering the latest news and official products from the Wizarding World and our partners.</p>
+                    <p>TM & © WBEI. WIZARDING WORLD Publishing and Theatrical Stage Rights © J.K. Rowling.</p>
+                </div>
+                <div class="after-line-2">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

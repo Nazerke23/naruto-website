@@ -1,0 +1,33 @@
+/*this css file i created in order to keep all of my fonts, I downloaded them from different websites
+  that why i decided to make this file*/
+
+
+
+@font-face{
+    font-family: Jokerman;
+    src: url(../myfonts/Jokerman-Regular.ttf);
+}
+
+
+
+
+@font-face{
+    font-family: Monotype;
+    src: url(../myfonts/monotype-corsiva1.ttf);
+}
+
+
+
+
+
+@font-face{
+    font-family: Vinerit;
+    src: url(../myfonts/VINERITC.TTF);
+}
+
+
+
+@font-face{
+    font-family: ITCkrist;
+    src: url(../myfonts/ITCKRIST.TTF);
+}

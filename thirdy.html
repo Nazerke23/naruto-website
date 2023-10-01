@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third-section</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .box{
+         border: 0px solid gold;
+    }
+    .third-section{
+        min-height: 100vh;
+        width: 100%;
+        background: #02025ad8;
+        display: flex;
+        color: white;
+        font-family: 'Goldman', cursive;
+    }
+
+    .third-section .third-container{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+
+    .third-section .third-container .third-1{
+        justify-content: center;
+        align-self: center;
+        width: 45%;
+        padding: 2rem;
+    }
+
+    .third-section .third-container .third-1 h2{
+        font-size: 28px;
+    }
+
+    .third-section .third-container .third-1 p{
+        font-size: 20px;
+    }
+
+    .third-section .third-container .third-1 .but-contain{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .third-section .third-container .third-2{
+        width: 50%;
+        justify-content: center;
+        align-self: center;
+        padding: 2rem;
+    }
+
+    .third-section .third-container .third-2 img{
+        width: 100%;
+    }
+
+    .third-section .third-container .third-1 a{
+        position: relative;
+        text-transform: uppercase;
+        background: #fff;
+        color: #111;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 15px;
+    }
+
+    .third-section .third-container .third-1 a:hover{
+        background: rgb(248, 159, 58);
+        color: #fff;
+    }
+
+    
+    .trailer{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .trailer.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .trailer video{
+        position: relative;
+        max-width: 1200px;
+        outline: none;
+    }
+
+    .close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        filter: invert(1);
+        max-width: 32px;
+    }
+
+
+    @media (max-width: 1201px){
+        .trailer video{
+            max-width: 90%;
+        }
+    }
+
+
+    @media only screen and (max-width: 850px){
+    
+        .third-section .third-container .third-1{
+        width: 100%;
+        }
+
+        .third-section .third-container .third-1 p{
+        font-size: 17px;
+        }
+
+        .third-section .third-container .third-2{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="third-section box">
+        <div class="third-container box">
+            <div class="third-1 box">
+                <h5>We believe</h5>
+                <h2>What Naruto teaches us?</h2>
+                <h4>------------------------------------------------</h4><br>
+                <p>It also teaches us about forgivness, shown when Naruto never holds a grudge against the villagers 
+                    despite how they treated him and how he forgave even the likes of Orochimaru, despite all the did. 
+                    It tells that it is never too late to Go back to the right side. Redemption is always possible, 
+                    seen when Obito realizes that he had been wrong and helps team7.Naruto also teaches us the lesson 
+                    of peace.
+                </p>
+                <div class="but-contain">
+                    <a href="#" onclick="toggleB()"">Watch Trailer</a>
+                </div>
+            </div>
+            <div class="third-2 box">
+                <img src="./images/5-thirdone.jpg" alt="">
+            </div>
+            <div class="trailer">
+                <video src="./images/Naruto_and_Kurama_[AMV]_-_Bring_Me_Back_To_Life.mp4" controls = "true"></video>
+                <img src="./images/34-delete.png" class="close" alt="" onclick="toggleB()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleB(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>      
+</body>
+</html>

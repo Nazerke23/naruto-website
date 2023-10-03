@@ -215,9 +215,12 @@ header {
 /*===========xxxx======================TOP===============xxxxx======*/
 
 /*==================NARUTO UZUMAKI====================*/
+.center-parent {
+  position: relative;
+}
 .center {
   position: absolute;
-  top: 30%;
+  bottom: -25rem;
   width: 40%;
   left: 12%;
 }
@@ -282,10 +285,14 @@ header {
 /*--x-------------------------------------------------------------------------------------------------Navigation right--x--*/
 
 /*==================SCROLL DOWN====================*/
+.scroll-parent {
+  position: relative;
+}
+
 .scrolldown {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
+  bottom: -50rem;
+  right: 50%;
   width: 40px;
   height: 40px;
   transform: translateY(-80px) translateX(-50%) rotate(45deg);

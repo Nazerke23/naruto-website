@@ -6,9 +6,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap");
 
 /*=====================GLOBAL=======================*/
-html {
-  overflow: hidden;
+
+body {
+  overflow-x: hidden;
 }
+
 * {
   padding: 0;
   margin: 0;

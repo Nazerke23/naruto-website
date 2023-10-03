@@ -7,7 +7,7 @@
 
 /*=====================GLOBAL=======================*/
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 * {
   padding: 0;
